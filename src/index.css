@@ -4,11 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #dfdff0;
   font-family: "General Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @layer base {

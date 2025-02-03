@@ -26,7 +26,8 @@ const Hero = () => {
     }
   }, [loadedVideo]);
 
-  const upComingVideoIndex = currentIndex === totalVideos ? 1 : (currentIndex % totalVideos) + 1;
+  const upComingVideoIndex =
+    currentIndex === totalVideos ? 1 : (currentIndex % totalVideos) + 1;
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -91,7 +92,10 @@ const Hero = () => {
         </div>
       )}
 
-      <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
+      <div
+        id="video-frame"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
+      >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
@@ -121,8 +125,10 @@ const Hero = () => {
           ></video>
 
           <video
-            src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
-            // autoPlay
+            src={getVideoSrc(
+              currentIndex === totalVideos - 1 ? 1 : currentIndex
+            )}
+            autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
